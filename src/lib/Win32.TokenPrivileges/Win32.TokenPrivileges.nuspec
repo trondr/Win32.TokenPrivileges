@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Win32.TokenPrivileges</id>
+    <version>0.0.0.0</version>
+    <title>Win32.TokenPrivileges</title>
+    <authors>github.com/trondr</authors>
+    <owners>github.com/trondr</owners>
+    <licenseUrl>https://github.com/trondr/Win32.TokenPrivileges/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/trondr/Win32.TokenPrivileges</projectUrl>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Adjust token privileges of a Win32 process.</description>
+    <copyright>github.com/trondr</copyright>
+    <tags>AdjustTokenPrivileges advapi32 Privileges OpenProcessToken GetTokenInformation EnablePrivilege DisablePrivilege</tags>
+    <references>
+      <reference file="Win32.TokenPrivileges.dll" />      
+    </references>
+	<dependencies>	  
+	  <dependency id="Common.Logging" version="3.4.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Win32.TokenPrivileges.dll" target="lib\net452" />
+    <file src="Win32.TokenPrivileges.pdb" target="lib\net452" />    
+	<file src="**\*.cs" target="src" />
+  </files>
+</package>
