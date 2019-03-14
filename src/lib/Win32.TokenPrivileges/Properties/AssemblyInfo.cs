@@ -9,8 +9,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyProduct("Win32.TokenPrivileges")]
 [assembly: AssemblyCompany("github/trondr")]
 [assembly: AssemblyCopyright("Copyright © github/trondr 2019")]
-[assembly: AssemblyVersion("1.0.19070.2")]
-[assembly: AssemblyFileVersion("1.0.19070.2")]
+[assembly: AssemblyVersion("1.0.19073.2")]
+[assembly: AssemblyFileVersion("1.0.19073.2")]
 [assembly: ComVisible(false)]
 [assembly: Guid("59f9fa7c-b4a9-422c-8c52-958bbd1c6688")]
 [assembly: InternalsVisibleTo("Win32.TokenPrivileges.Tests")]
@@ -21,8 +21,8 @@ namespace System {
         internal const System.String AssemblyProduct = "Win32.TokenPrivileges";
         internal const System.String AssemblyCompany = "github/trondr";
         internal const System.String AssemblyCopyright = "Copyright © github/trondr 2019";
-        internal const System.String AssemblyVersion = "1.0.19070.2";
-        internal const System.String AssemblyFileVersion = "1.0.19070.2";
+        internal const System.String AssemblyVersion = "1.0.19073.2";
+        internal const System.String AssemblyFileVersion = "1.0.19073.2";
         internal const System.Boolean ComVisible = false;
         internal const System.String Guid = "59f9fa7c-b4a9-422c-8c52-958bbd1c6688";
         internal const System.String InternalsVisibleTo = "Win32.TokenPrivileges.Tests";
