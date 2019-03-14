@@ -1,5 +1,34 @@
 # Win32.TokenPrivileges
-Adjust token privileges of a Win32 process
+Adjust token privileges of a Win32 process.
+
+##Example
+
+```Csharp
+using Win32.TokenPrivileges;
+
+[...]
+
+var currentProcess = Process.GetCurrentProcess();
+Console.WriteLine("Privilege status before:");
+Console.WriteLine($"SeBackupPrivilege: {PrivilegeProvider.HasPrivilege(null, currentProcess,PrivilegeName.SeBackupPrivilege)}");
+Console.WriteLine($"SeRestorePrivilege: {PrivilegeProvider.HasPrivilege(null, currentProcess, PrivilegeName.SeRestorePrivilege)}"); 
+using (new AdjustPrivilege(PrivilegeName.SeBackupPrivilege))
+{
+   using (new AdjustPrivilege(PrivilegeName.SeRestorePrivilege))
+   {    
+      Console.WriteLine("Privileges should now be granted.");
+      Console.WriteLine($"SeBackupPrivilege: {PrivilegeProvider.HasPrivilege(null, currentProcess,PrivilegeName.SeBackupPrivilege)}");
+      Console.WriteLine($"SeRestorePrivilege: {PrivilegeProvider.HasPrivilege(null, currentProcess,PrivilegeName.SeRestorePrivilege)}"); 
+   }
+}
+Console.WriteLine("Privilege status after:");
+Console.WriteLine($"SeBackupPrivilege: {PrivilegeProvider.HasPrivilege(null, currentProcess,PrivilegeName.SeBackupPrivilege)}");
+Console.WriteLine($"SeRestorePrivilege: {PrivilegeProvider.HasPrivilege(null, currentProcess, PrivilegeName.SeRestorePrivilege)}"); 
+
+[...]
+
+
+```
 
 ## Build
 
